@@ -4,8 +4,8 @@ const Valoraciones = require('../models/Valoraciones');
 exports.mostrarValoraciones = async (req, res, next) => {
     try {
         // obtener todos los cursos
-        const valoracion = await Valoraciones.find({});
-        res.json(valoracion);
+        const valoraciones = await Valoraciones.find({});
+        res.json(valoraciones);
     } catch (error) {
         console.log(error);
         next();

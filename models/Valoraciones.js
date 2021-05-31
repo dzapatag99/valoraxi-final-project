@@ -15,7 +15,7 @@ const valoracionesSchema = new Schema({
         type: String
     }, 
     valoracion: {
-        type: String
+        type: Number
     },
     estrellas: {
         type: Number
@@ -24,4 +24,4 @@ const valoracionesSchema = new Schema({
 { versionKey: false }
 );
 
-module.exports = mongoose.model('Valoraciones', valoracionesSchema);
+module.exports = mongoose.model('Valoraciones', valoracionesSchema, 'Valoraciones');

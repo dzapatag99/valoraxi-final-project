@@ -1,11 +1,11 @@
-const Valoraciones = require('../models/Valoraciones');
+const Clientes = require('../models/Clientes');
 
 // Muestra todos los cursos
-exports.mostrarValoraciones = async (req, res, next) => {
+exports.mostrarClientes = async (req, res, next) => {
     try {
         // obtener todos los cursos
-        const valoraciones = await Valoraciones.find({});
-        res.json(valoraciones);
+        const clientes = await Clientes.find({});
+        res.json(clientes);
     } catch (error) {
         console.log(error);
         next();
@@ -13,26 +13,26 @@ exports.mostrarValoraciones = async (req, res, next) => {
 };
 
 // Muestra un curso en especifico por su ID
-exports.mostrarValoracion = async (req, res, next) => {
-    const valoracion = await Valoraciones.findById(req.params.idValoracion);
+exports.mostrarCliente = async (req, res, next) => {
+    const cliente = await Clientes.findById(req.params.idCliente);
 
-    if(!valoracion) {
+    if(!cliente) {
         res.json({mensaje : 'Ese Curso no existe'});
         return next();
     }
 
     // Mostrar el curso
-    res.json(valoracion);
+    res.json(cliente);
 };
 
 
 // agrega un nuevo ingrediente
-exports.nuevoValoracion = async (req, res, next) => {
-    const valoracion = new Valoraciones(req.body);
+exports.nuevoCliente = async (req, res, next) => {
+    const cliente = new Clientes(req.body);
     try {
         // almacenar el registro
-        await valoracion.save();
-        res.json({ mensaje : 'Se agrego una nueva valoracion' });
+        await cliente.save();
+        res.json({ mensaje : 'Se agrego una nueva cliente' });
     } catch (error) {
         // si hay un error, console.log y next
         res.send(error);
@@ -41,23 +41,23 @@ exports.nuevoValoracion = async (req, res, next) => {
 };
 
 // Actualiza un curso via id
-exports.actualizarValoracion = async (req, res, next) => {
+exports.actualizarCliente = async (req, res, next) => {
     try {
         console.log("datos", req.body);
-        const valoracion = await Valoraciones.findOneAndUpdate(
+        const cliente = await Clientes.findOneAndUpdate(
             { _id : req.body.id }, 
             {
                 nombreTaxista:req.body.nombreTaxista,
                 nombreCliente:req.body.nombreCliente,
                 lugarRecogida:req.body.lugarRecogida,
                 lugarDestino:req.body.lugarDestino,
-                valoracion:req.body.valoracion,
+                cliente:req.body.cliente,
                 estrellas:req.body.estrellas,
             }, 
             //Opciones, devolver el nuevo objeto modificado
             {new : true}
         );
-        res.json(valoracion);
+        res.json(cliente);
     } catch (error) {
         res.send(error);
         next();
@@ -65,10 +65,10 @@ exports.actualizarValoracion = async (req, res, next) => {
 };
 
 // Elimina un curso via ID
-exports.eliminarValoracion = async (req, res, next) => {
+exports.eliminarCliente = async (req, res, next) => {
     try {
-        await Valoraciones.findByIdAndDelete({ _id : req.params.idValoracion });
-        res.json({mensaje : 'La valoracion se ha eliminado'});
+        await Clientes.findByIdAndDelete({ _id : req.params.idCliente });
+        res.json({mensaje : 'La cliente se ha eliminado'});
     } catch (error) {
         console.log(error);
         next();

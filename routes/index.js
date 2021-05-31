@@ -12,13 +12,13 @@ module.exports = function() {
     router.get('/Valoraciones/:idValoracion',  valoracionesController.mostrarValoraciones);
 
     // nuevo Curso
-    router.post('/Valoraciones', valoracionesController.nuevoValoraciones);    
+    router.post('/Valoraciones', valoracionesController.nuevoValoracion);    
 
     // Actualizar Cursos
-    router.put('/Valoraciones', valoracionesController.actualizarValoraciones);
+    router.put('/Valoraciones', valoracionesController.actualizarValoracion);
 
     // Eliminar Cursos
-    router.delete('/Valoraciones/:idValoracion', valoracionesController.eliminarValoraciones);
+    router.delete('/Valoraciones/:idValoracion', valoracionesController.eliminarValoracion);
 
     return router;
 };

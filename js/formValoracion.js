@@ -1,4 +1,4 @@
-const dominioAPI = "http://localhost:5000/cursos";
+const dominioAPI = "http://localhost:5000/Valoraciones";
 
 function getLista() {
     fetch(dominioAPI)

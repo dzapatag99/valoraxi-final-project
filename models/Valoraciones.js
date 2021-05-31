@@ -2,6 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const valoracionesSchema = new Schema({
+    idValoracion: {
+        type: String
+    }, 
     nombreTaxista: {
         type: String
     }, 
@@ -18,7 +21,7 @@ const valoracionesSchema = new Schema({
         type: String
     },
     estrellas: {
-        type: Number
+        type: String
     }
 }, 
 { versionKey: false }

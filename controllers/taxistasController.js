@@ -1,11 +1,11 @@
 const Valoraciones = require('../models/Valoraciones');
 
 // Muestra todos los cursos
-exports.mostrarValoraciones = async (req, res, next) => {
+exports.mostrarCursos = async (req, res, next) => {
     try {
         // obtener todos los cursos
-        const valoracion = await Valoraciones.find({});
-        res.json(valoracion);
+        const Valoraciones = await Valoraciones.find({});
+        res.json(Valoraciones);
     } catch (error) {
         console.log(error);
         next();
@@ -22,7 +22,7 @@ exports.mostrarValoraciones = async (req, res, next) => {
     }
 
     // Mostrar el curso
-    res.json(valoracion);
+    res.json(curso);
 };
 
 
@@ -67,7 +67,7 @@ exports.actualizarValoracion = async (req, res, next) => {
 // Elimina un curso via ID
 exports.eliminarValoracion = async (req, res, next) => {
     try {
-        await Valoraciones.findByIdAndDelete({ _id : req.params.idValoracion });
+        await Cursos.findByIdAndDelete({ _id : req.params.idValoracion });
         res.json({mensaje : 'La valoracion se ha eliminado'});
     } catch (error) {
         console.log(error);

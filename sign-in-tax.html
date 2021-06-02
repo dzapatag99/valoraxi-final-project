@@ -36,16 +36,29 @@
     <!-- Custom styles for this template -->
     <link href="css/signin.css" rel="stylesheet">
   </head>
-  <body class="text-center">
+  <body class="text-center bg-warning">
     
 <main class="form-signin">
   <form>
     <h1 class="h3 mb-3 fw-normal">First Register Here!</h1>
     <br>
     <label for="inputName" class="visually-hidden">User</label>
-    <input type="name" id="nameu" class="form-control" value="" placeholder="Name" required>
+    <input type="name" id="nameu" class="form-control" value="" placeholder="Username" required>
     <label for="inputPassword" class="visually-hidden">Password</label>
     <input type="password" id="pw" class="form-control" value="" placeholder="Password" required>
+    <label for="inputName" class="visually-hidden">Driver</label>
+    <input type="name" id="driver" class="form-control" value="" placeholder="Driver" required>
+    <label for="inputName" class="visually-hidden">Año Registo</label>
+    <input type="name" id="registerDate" class="form-control" value="" placeholder="Año Registo" required>
+    <label for="inputName" class="visually-hidden">DNI</label>
+    <input type="name" id="dni" class="form-control" value="" placeholder="DNI (sin letra)" required>
+    <input class="form-control" type="file" id="formFile">
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Sitio Frecuentado</option>
+      <option value="Plaza España">Plaza España</option>
+      <option value="Aeropuerto">Aeropuerto</option>
+      <option value="Calle Aragon">Calle Aragon</option>
+    </select>
     <button class="w-100 btn btn-lg btn-primary" type="submit" id="btnRegister">Register</button>
   </form>
   <form>

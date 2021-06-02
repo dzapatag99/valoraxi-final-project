@@ -56,5 +56,5 @@ function logOut(){
     localStorage.removeItem('name1'); 
     localStorage.removeItem('pw'); 
     location.reload();
-    window.location.href = "./sign-in-clie.html";
+    window.location.href = "./sign-in-tax.html";
 }

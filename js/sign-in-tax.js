@@ -23,13 +23,12 @@ function eventSignInListeners() {
     btnLogin.addEventListener("click", (e) => {
         e.preventDefault()
         logIn()
-        store()
 
     });
 }
-function store() {
-    localStorage.setItem('name1', name1.value);
-    localStorage.setItem('pw', pw.value);
+function store(user, password) {
+    localStorage.setItem('name1', user);
+    localStorage.setItem('pw', password);
 }
 
 function logIn() {
@@ -43,7 +42,7 @@ function logIn() {
             data.forEach(tax => {
                 if (userName == tax.username && userPw == tax.password) {      
                     loged = true;
-            
+                    store(tax.username, tax.password);
                 }
             });
             if (loged == true){
@@ -70,17 +69,17 @@ function insertarTaxista() {
         "conductor": document.querySelector("#driver").value,
         "añoRegistro": document.querySelector("#registerDate").value,
         "DNI": document.querySelector("#dni").value,
-        "img": "./img/tax1.jpg",
+        "img": "./img/tax5.jpg",
         "sitioFrecuentado": document.querySelector("#frecuentedSite").value
     };
-    console.log(taxData)
 
-    fetch(dominioAPItaxistas, {
+   fetch(dominioAPItaxistas, {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
+
         body: JSON.stringify(taxData)
     })
         .then(response => {
@@ -88,5 +87,6 @@ function insertarTaxista() {
         })
         .then(response => console.log(response))
         .catch(error => error);
-
+        
 }
+

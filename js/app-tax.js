@@ -43,10 +43,13 @@ function getStars(taxista){
           })
           avg = count / estrellas.length;
           
+        }else{
+          return "No tiene valoracion"
         }
         console.log(avg)
         
-    }); 
+    });
+    
 
 }
 

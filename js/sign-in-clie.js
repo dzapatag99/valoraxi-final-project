@@ -23,13 +23,12 @@ function eventSignInListeners() {
     btnLogin.addEventListener("click", (e) => {
         e.preventDefault()
         logIn()
-        store()
 
     });
 }
-function store() {
-    localStorage.setItem('name1', name1.value);
-    localStorage.setItem('pw', pw.value);
+function store(user, password) {
+    localStorage.setItem('name1', user);
+    localStorage.setItem('pw', password);
 }
 
 function logIn() {
@@ -43,7 +42,7 @@ function logIn() {
             data.forEach(client => {
                 if (userName == client.username && userPw == client.password) {      
                     loged = true;
-            
+                    store(client.username, client.password);
                 }
             });
             if (loged == true){

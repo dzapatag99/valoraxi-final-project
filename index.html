@@ -1,95 +1,105 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link href="style.css" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/0a74221b98.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>Taxistas</title>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent position-absolute w-100">
-        <div class="container">
-          <a class="navbar-brand fw-bold" href="#">Valoraxi PMI<span class="text-primary">.</span></a>
-          <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fas fa-bars lead text-dark"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item d-flex">
-                <a class="nav-link align-self-center text-dark" aria-current="page" href="taxistas.html">Taxistas</a>
-              </li>
-              <li class="nav-item d-flex">
-                <a class="nav-link align-self-center text-dark" href="#">Valoraciones</a>
-              </li>
-              <li class="nav-item me-2">
-                <a class="btn btn-light" href="sign-in-clie.html">Accede como cliente</a>
-              </li>
-              <li class="nav-item">
-                <a class="btn btn-warning" href="sign-in-tax.html">Accede como taxista</a>
-              </li>
-            </ul>
-          </div>
+  <title>Taxistas</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent position-absolute w-100" id="navbar">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">Valoraxi PMI<span class="text-primary">.</span></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars lead text-dark"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item d-flex">
+            <a class="nav-link align-self-center text-dark" aria-current="page" href="taxistas.html">Taxistas</a>
+          </li>
+          <li class="nav-item d-flex">
+            <a class="nav-link align-self-center text-dark" href="valoraciones.html">Valoraciones</a>
+          </li>
+          <li class="nav-item me-2">
+            <a class="btn btn-light" href="sign-in-clie.html">Accede como cliente</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-warning" href="sign-in-tax.html">Accede como taxista</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section id="hero">
+    <div class="row g-0 h-100">
+      <div class="col-lg-6 d-flex">
+        <div class="content mx-auto align-self-center px-4 my-5">
+          <small class="d-block text-primary mb-3"></span>Deja tus valoraciones!</small>
+          <h1 class="display-4 fw-bold mb-4">Valoramos con criterio</h1>
+          <p class="lead mb-4">Sentimos que es importante que valores, no lo dudes</p>
+          <a href="#" class="btn btn-warning mb-5">Abre tu cuenta hoy</a>
+
         </div>
-      </nav>
-
-      <section id="hero">
-          <div class="row g-0 h-100">
-            <div class="col-lg-6 d-flex">
-                <div class="content mx-auto align-self-center px-4 my-5">
-                    <small class="d-block text-primary mb-3"></span>Deja tus valoraciones!</small>
-                    <h1 class="display-4 fw-bold mb-4">Valoramos con criterio</h1>
-                    <p class="lead mb-4">Sentimos que es importante que valores, no lo dudes</p>
-                    <a href="#" class="btn btn-warning mb-5">Abre tu cuenta hoy</a>
-                    
-                </div>
-            </div>
-            <div class="col-lg-6 d-flex bg-light">
-                <div class="content mx-auto align-self-center px-4 my-5">
-                    <img src="./img/movil_taxi.png" class="img-fluid">
-                </div>
-            </div>
-          </div>
-      </section>
-
-            <div class="col-lg-3 col-sm-6 my-4">
-              <h5 class="fw-bold mb-3">Taxis</h5>
-              <ul class="list-unstyled">
-                <li class="mb-3">Avenida Emili Darder</li>
-                <li>
-                  <ul class="list-inline">
-                    <li class="list-inline-item me-3"><a href="" class="lead text-dark"><i class="fab fa-facebook"></i></a></li>
-                    <li class="list-inline-item me-3"><a href="" class="lead text-dark"><i class="fab fa-instagram"></i></a></li>
-                    <li class="list-inline-item"><a href="" class="lead text-dark"><i class="fab fa-linkedin"></i></a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="border-top py-4">
-            <div class="row">
-              <div class="col-lg-6 col-md-12">
-                <small>2021. Taxis Valoraciones. Todos los derechos reservados</small>
-              </div>
-              <div class="col-lg-6 col-md-12">
-                <ul class="list-inline text-lg-end">
-                  <li class="list-inline-item"><a href="#" class="text-dark text-decoration-none"><small>Términos y condiciones</small></a></li>
-                  <li class="list-inline-item"><a href="#" class="text-dark text-decoration-none"><small>Aviso de privacidad</small></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
+      </div>
+      <div class="col-lg-6 d-flex bg-light">
+        <div class="content mx-auto align-self-center px-4 my-5">
+          <img src="./img/movil_taxi.png" class="img-fluid">
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
+
+  <div class="col-lg-3 col-sm-6 my-4">
+    <h5 class="fw-bold mb-3">Taxis</h5>
+    <ul class="list-unstyled">
+      <li class="mb-3">Avenida Emili Darder</li>
+      <li>
+        <ul class="list-inline">
+          <li class="list-inline-item me-3"><a href="" class="lead text-dark"><i class="fab fa-facebook"></i></a></li>
+          <li class="list-inline-item me-3"><a href="" class="lead text-dark"><i class="fab fa-instagram"></i></a></li>
+          <li class="list-inline-item"><a href="" class="lead text-dark"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  </div>
+
+  <div class="border-top py-4">
+    <div class="row">
+      <div class="col-lg-6 col-md-12">
+        <small>2021. Taxis Valoraciones. Todos los derechos reservados</small>
+      </div>
+      <div class="col-lg-6 col-md-12">
+        <ul class="list-inline text-lg-end">
+          <li class="list-inline-item"><a href="#" class="text-dark text-decoration-none"><small>Términos y
+                condiciones</small></a></li>
+          <li class="list-inline-item"><a href="#" class="text-dark text-decoration-none"><small>Aviso de
+                privacidad</small></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/ffec4ec2ed.js" crossorigin="anonymous"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/ffec4ec2ed.js" crossorigin="anonymous"></script>
+  <script src="js/constant-tax.js"></script>
+</body>
+
 </html>

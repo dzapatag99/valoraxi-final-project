@@ -15,7 +15,7 @@ const valoracionesSchema = new Schema({
         type: String
     }, 
     valoracion: {
-        type: Number
+        type: String
     },
     estrellas: {
         type: Number

@@ -1,4 +1,5 @@
 const dominioAPI = "http://localhost:5000/Taxistas";
+const dominioAPIvaloraciones = "http://localhost:5000/Valoraciones";
 const btnFilter = document.querySelector("#buscadorTax");
 
 getLista();
@@ -20,7 +21,7 @@ function getLista() {
             <h5 class="card-title">${taxista.conductor}</h5>
             <p class="card-text">Numero de Taxista: ${taxista.idCoche}
             </p>
-            <p class="card-text">Estrellas: ${getStars(taxista.nombre)}
+            <p class="card-text">Estrellas: ${getStars(taxista.conductor)}
             </p>
           </div>
           `
@@ -29,7 +30,26 @@ function getLista() {
     });
 }
 
-function getStars(){
+function getStars(taxista){
+  fetch(dominioAPIvaloraciones)
+    .then(result => result.json())
+    .then(data => {
+        let count = 0;
+        let avg = 0;
+        let estrellas = data.filter( usuario => usuario.nombreTaxista == taxista);
+        if(estrellas.length > 0){
+          estrellas.forEach(element =>{
+            count += element.estrellas;
+          })
+          avg = count / estrellas.length;
+          
+        }
+        console.log(avg)
+        
+    }); 
 
 }
 
+function pintarEstrellas(){
+
+}
